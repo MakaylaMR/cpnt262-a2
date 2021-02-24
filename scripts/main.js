@@ -89,7 +89,7 @@ function toDisplay() {
   //loop equation
   for (let i = 0; i < jeeps.length; i++){
     //assigning loop to variables
-   let image = `${jeeps[i].imgURL}`;
+  let image = `${jeeps[i].imgURL}`;
   let title = `${jeeps[i].title}`;
   let description = `${jeeps[i].description}`;
   let credit = `${jeeps[i].credit}`;
