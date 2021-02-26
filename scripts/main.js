@@ -9,6 +9,7 @@ const jeeps = [
     height: 683,
     pathURL:'assets/images/couple-jeeps-medium.jpg', 
     credit: 'Credit: Nathan Strome',
+    creditLink: '<a href="https://www.instagram.com/evolution_jk/',
     alt: 'Two Jeeps'
   },
   {
@@ -19,6 +20,7 @@ const jeeps = [
     height: 683,
     pathURL:'assets/images/jeep-background-medium.jpg',
     credit: 'Credit: Nathan Strome',
+    creditLink: '<a href="https://www.instagram.com/evolution_jk/',
     alt: 'Two Jeeps'
   },
   {
@@ -29,6 +31,7 @@ const jeeps = [
     height: 683,
     pathURL:'assets/images/jeep-profile-makayla-medium.jpg',
     credit: 'Credit: Nathan Strome',
+    creditLink: '<a href="https://www.instagram.com/evolution_jk/',
     alt: 'jeeps'
   },
   {
@@ -39,6 +42,7 @@ const jeeps = [
     height: 683,
     pathURL:'assets/images/jeep-profile-nathan-medium.jpg',
     credit: 'Credit: Nathan Strome',
+    creditLink: '<a href="https://www.instagram.com/evolution_jk/',
     alt: 'jeeps'
   },
   {
@@ -49,6 +53,7 @@ const jeeps = [
     height: 683,
     pathURL:'assets/images/jeepjk-bctrip-medium.jpg',
     credit: 'Credit: Nathan Strome',
+    creditLink: '<a href="https://www.instagram.com/evolution_jk/',
     alt:'jeeps in bc'
   },
   {
@@ -59,6 +64,7 @@ const jeeps = [
     height: 683,
     pathURL:'assets/images/jeepjk-jeeptj-airdown-medium.jpg',
     credit: 'Credit: Nathan Strome',
+    creditLink: '<a href="https://www.instagram.com/evolution_jk/',
     alt:'jeeps'
   },
   {
@@ -69,6 +75,7 @@ const jeeps = [
     height: 683,
     pathURL:'assets/images/jeeptj-airdown-medium.jpg',
     credit: 'Credit: Nathan Strome',
+    creditLink: '<a href="https://www.instagram.com/evolution_jk/',
     alt:'jeeps'
   },
   {
@@ -79,6 +86,7 @@ const jeeps = [
     height: 682,
     pathURL:'assets/images/jeeptj-hole-medium.jpg',
     credit: 'Credit: Nathan Strome',
+    creditLink: '<a href="https://www.instagram.com/evolution_jk/',
     alt:'jeeps'
   },
   {
@@ -89,6 +97,7 @@ const jeeps = [
     height: 683,
     pathURL:'assets/images/jeeptj-sideprofile-medium.jpg',
     credit: 'Credit: Nathan Strome',
+    creditLink: '<a href="https://www.instagram.com/evolution_jk/',
     alt:'jeeps'
   }
 ];
@@ -117,6 +126,7 @@ jeeps.forEach(function(sectionRight){
   
   <h1>${sectionRight.title}</h1>
   <h2>${sectionRight.credit}</h2>
+  <h2><a href="${sectionRight.creditLink}">Instagram</a></h2>
   <p>${sectionRight.description}</p>`;
   
 });
