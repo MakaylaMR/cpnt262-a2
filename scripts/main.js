@@ -92,18 +92,37 @@ const jeeps = [
     alt:'jeeps'
   }
 ];
-
-// Start unordered list
-let output = '<figure>\n';
-
-jeeps.forEach(function(jeep){
+//decided to create two different outputs for my css grid vision, this had to include two different sections
+//left section -- includes: images, height and width
+let output = '<section>\n';
+jeeps.forEach(function(sectionLeft){
   output += `
 
-  <img src="${jeep.pathURL}" alt="some jeeps">
-  <h2>${jeep.title}</h2>
-  <figcaption>${jeep.description}</figcaption>`;
+  <aside>${sectionLeft.height}</aside>
+  <img src="${sectionLeft.pathURL}" alt="Jeep Pictures">
+  <aside>${sectionLeft.width}</aside>`;
+  
 });
 
-output += '</figure>';
+output += '</section>';
+  
+document.querySelector('.width-height-image').innerHTML = output;
 
-document.querySelector('figure').innerHTML = output;
+
+//right section -- includes: title,credit and description
+let output2 = '<section>\n';
+
+jeeps.forEach(function(sectionRight){
+  output2 += `
+  
+  <h1>${sectionRight.title}</h1>
+  <h2>${sectionRight.credit}</h2>
+  <p>${sectionRight.description}</p>`;
+  
+});
+
+output2 += '</section>';
+  
+document.querySelector('.title-credit-desc').innerHTML = output2;
+
+

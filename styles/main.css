@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin&family=Roboto+Condensed:wght@700&display=swap');
-/*heading*/
+
+/*headings*/
 h1, h2, h3 {
   font-family: 'Roboto Condensed', sans-serif;
 }
-/*paragraph*/
+/*paragraphs*/
 figcaption, footer {
   font-family: 'Cabin', sans-serif;
 }
-
+/*header*/
 h1 {
   text-align: center;
 }
 
 figure {
   display: grid;
+  grid-template-columns: repeat(3, auto);
 }
 
 img {
@@ -23,6 +25,7 @@ img {
   justify-self: center;
 
   padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 header {
