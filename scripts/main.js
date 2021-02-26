@@ -106,7 +106,7 @@ jeeps.forEach(function(jeep){
 
 output += '</figure>';
 
-document.querySelector('main').innerHTML = output;
+document.querySelector('figure').innerHTML = output;
 
 
 
