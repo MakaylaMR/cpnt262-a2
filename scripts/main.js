@@ -104,12 +104,12 @@ const jeeps = [
 //decided to create two different outputs for my css grid vision, this had to include two different sections
 //left section -- includes: images, height and width
 let output = '<section>\n';
-jeeps.forEach(function(sectionLeft){
+jeeps.forEach(function(sectionRight){
   output += `
 
-  <aside>${sectionLeft.height}</aside>
-  <img src="${sectionLeft.pathURL}" alt="Jeep Pictures">
-  <aside>${sectionLeft.width}</aside>`;
+  <aside>${sectionRight.height}</aside>
+  <img src="${sectionRight.pathURL}" alt="Jeep Pictures">
+  <aside>${sectionRight.width}</aside>`;
   
 });
 
@@ -121,13 +121,13 @@ document.querySelector('.width-height-image').innerHTML = output;
 //right section -- includes: title,credit and description
 let output2 = '<section>\n';
 
-jeeps.forEach(function(sectionRight){
+jeeps.forEach(function(sectionLeft){
   output2 += `
   
-  <h1>${sectionRight.title}</h1>
-  <h2>${sectionRight.credit}</h2>
-  <h2><a href="${sectionRight.creditLink}">Instagram</a></h2>
-  <p>${sectionRight.description}</p>`;
+  <h1>${sectionLeft.title}</h1>
+  <h2>${sectionLeft.credit}</h2>
+  <h2><a href="${sectionLeft.creditLink}">Instagram</a></h2>
+  <p>${sectionLeft.description}</p>`;
   
 });
 

@@ -11,8 +11,11 @@ figcaption, footer {
 }
 
 /*header*/
-h1 {
+.header {
   text-align: center;
+
+  padding:0.5rem;
+  margin:0;
 }
 header {
   background: #000;
@@ -29,3 +32,31 @@ footer {
 
   text-align:center;
 }
+/***********/
+/*Main Grid Area*/
+/**********/
+main {
+  display:grid;
+
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: auto;
+  grid-template-areas:
+  "header header"
+  "title image";
+}
+
+.width-height-image {
+  grid-area: image;
+}
+
+.title-credit-desc {
+  grid-area: title;
+}
+
+header {
+  grid-area: header;
+}
+
+/***********/
+/*Left Section Grid Area*/
+/**********/
