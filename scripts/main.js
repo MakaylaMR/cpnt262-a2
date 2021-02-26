@@ -6,8 +6,9 @@ const jeeps = [
     title: 'Two Jeeps',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae ex accusamus laborum repellat ratione, rerum alias reiciendis dolorem culpa quas tempore laudantium eveniet at obcaecati.',
     width: 1024,
-    imgURL:'assets/images/couple-jeeps-medium.jpg', 
-    credit: 'Nathan Strome',
+    height: 683,
+    pathURL:'assets/images/couple-jeeps-medium.jpg', 
+    credit: 'Credit: Nathan Strome',
     alt: 'Two Jeeps'
   },
   {
@@ -15,8 +16,9 @@ const jeeps = [
     title: 'Jeep TJ',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae ex accusamus laborum repellat ratione, rerum alias reiciendis dolorem culpa quas tempore laudantium eveniet at obcaecati.',
     width: 1024,
-    imgURL:'assets/images/jeep-background-medium.jpg',
-    credit: 'Nathan Strome',
+    height: 683,
+    pathURL:'assets/images/jeep-background-medium.jpg',
+    credit: 'Credit: Nathan Strome',
     alt: 'Two Jeeps'
   },
   {
@@ -24,8 +26,9 @@ const jeeps = [
     title: 'Jeep TJ profile',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae ex accusamus laborum repellat ratione, rerum alias reiciendis dolorem culpa quas tempore laudantium eveniet at obcaecati.',
     width: 1024,
-    imgURL:'assets/images/jeep-profile-makayla-medium.jpg',
-    credit: 'Nathan Strome',
+    height: 683,
+    pathURL:'assets/images/jeep-profile-makayla-medium.jpg',
+    credit: 'Credit: Nathan Strome',
     alt: 'jeeps'
   },
   {
@@ -33,8 +36,9 @@ const jeeps = [
     title: 'Jeep JK profile',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae ex accusamus laborum repellat ratione, rerum alias reiciendis dolorem culpa quas tempore laudantium eveniet at obcaecati.',
     width: 1024,
-    imgURL:'assets/images/jeep-profile-nathan-medium.jpg',
-    credit: 'Nathan Strome',
+    height: 683,
+    pathURL:'assets/images/jeep-profile-nathan-medium.jpg',
+    credit: 'Credit: Nathan Strome',
     alt: 'jeeps'
   },
   {
@@ -42,8 +46,9 @@ const jeeps = [
     title: 'Jeep JK in BC',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae ex accusamus laborum repellat ratione, rerum alias reiciendis dolorem culpa quas tempore laudantium eveniet at obcaecati.',
     width: 1024,
-    imgURL:'assets/images/jeepjk-bctrip-medium.jpg',
-    credit: 'Nathan Strome',
+    height: 683,
+    pathURL:'assets/images/jeepjk-bctrip-medium.jpg',
+    credit: 'Credit: Nathan Strome',
     alt:'jeeps in bc'
   },
   {
@@ -51,8 +56,9 @@ const jeeps = [
     title: 'Two Jeeps airing down',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae ex accusamus laborum repellat ratione, rerum alias reiciendis dolorem culpa quas tempore laudantium eveniet at obcaecati.',
     width: 1024,
-    imgURL:'assets/images/jeepjk-jeeptj-airdown-medium.jpg',
-    credit: 'Nathan Strome',
+    height: 683,
+    pathURL:'assets/images/jeepjk-jeeptj-airdown-medium.jpg',
+    credit: 'Credit: Nathan Strome',
     alt:'jeeps'
   },
   {
@@ -60,8 +66,9 @@ const jeeps = [
     title: 'Jeep TJ airing down',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae ex accusamus laborum repellat ratione, rerum alias reiciendis dolorem culpa quas tempore laudantium eveniet at obcaecati.',
     width: 1024,
-    imgURL:'assets/images/jeeptj-airdown-medium.jpg',
-    credit: 'Nathan Strome',
+    height: 683,
+    pathURL:'assets/images/jeeptj-airdown-medium.jpg',
+    credit: 'Credit: Nathan Strome',
     alt:'jeeps'
   },
   {
@@ -69,8 +76,9 @@ const jeeps = [
     title: 'Jeep TJ going down a hill',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae ex accusamus laborum repellat ratione, rerum alias reiciendis dolorem culpa quas tempore laudantium eveniet at obcaecati.',
     width: 1024,
-    imgURL:'assets/images/jeeptj-hole-medium.jpg',
-    credit: 'Nathan Strome',
+    height: 682,
+    pathURL:'assets/images/jeeptj-hole-medium.jpg',
+    credit: 'Credit: Nathan Strome',
     alt:'jeeps'
   },
   {
@@ -78,46 +86,83 @@ const jeeps = [
     title: 'Jeep TJ side profile',
     description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae ex accusamus laborum repellat ratione, rerum alias reiciendis dolorem culpa quas tempore laudantium eveniet at obcaecati.',
     width: 1024,
-    imgURL:'assets/images/jeeptj-sideprofile-medium.jpg',
-    credit: 'Nathan Strome',
+    height: 683,
+    pathURL:'assets/images/jeeptj-sideprofile-medium.jpg',
+    credit: 'Credit: Nathan Strome',
     alt:'jeeps'
   }
 ];
 
+// Start unordered list
+let output = '<figure>\n';
+
+jeeps.forEach(function(jeep){
+  output += `
+
+  <img src="${jeep.pathURL}" alt="some jeeps">
+  <h2>${jeep.title}</h2>
+  <figcaption>${jeep.description}</figcaption>`;
+});
+
+output += '</figure>';
+
+document.querySelector('main').innerHTML = output;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //loop function
-function toDisplay() {
-  //loop equation
-  for (let i = 0; i < jeeps.length; i++){
-    //assigning loop to variables
-  let image = `${jeeps[i].imgURL}`;
-  let title = `${jeeps[i].title}`;
-  let description = `${jeeps[i].description}`;
-  let credit = `${jeeps[i].credit}`;
-  let alt = `${jeeps[i].alt}`;
-  let width = `${jeeps[i].width}`; 
-  //return the variables
-  return {
-    image,
-    title,
-    description,
-    credit,
-    alt,
-    width
-    }
-  }
-} 
+// function toDisplay() {
+//   //loop equation
+//   for (let i = 0; i < jeeps.length; i++){
+//     //assigning loop to variables
+//   let image = `${jeeps[i].imgURL}`;
+//   let title = `${jeeps[i].title}`;
+//   let description = `${jeeps[i].description}`;
+//   let credit = `${jeeps[i].credit}`;
+//   let alt = `${jeeps[i].alt}`;
+//   let width = `${jeeps[i].width}`; 
+//   //return the variables
+//   return {
+//     image,
+//     title,
+//     description,
+//     credit,
+//     alt,
+//     width
+//     }
+//   }
+// };
 
-//assigning the function to a variable, to use dot notation it must be attached to a variable
+//variables
+// let display = toDisplay();
 
-//To display to HTML
-let display = toDisplay();
-
-document.querySelector('img').setAttribute('src', display.image);
-document.querySelector('h2').innerHTML = display.title;
-document.querySelector('h3').innerHTML = display.credit
-document.querySelector('figcaption').innerHTML = display.description;
-
-//to go through the images
-function previous() {
-  let past = `${jeeps[i]}`
-}
+// let pics = document.querySelector('img').setAttribute('src', display.image);
+// let heading = document.querySelector('h2').innerHTML = display.title;
+// let photographer = document.querySelector('h3').innerHTML = display.credit;
+// let context = document.querySelector('figcaption').innerHTML = display.description;
