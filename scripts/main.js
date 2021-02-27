@@ -103,36 +103,38 @@ const jeeps = [
 ];
 //decided to create two different outputs for my css grid vision, this had to include two different sections
 //left section -- includes: images, height and width
-let output = '<section>\n';
-jeeps.forEach(function(sectionRight){
+let output = '<div class="width-height-image">\n';
+jeeps.forEach(function(sectionLeft){
   output += `
 
-  <aside>${sectionRight.height}</aside>
-  <img src="${sectionRight.pathURL}" alt="Jeep Pictures">
-  <aside>${sectionRight.width}</aside>`;
+  <aside>${sectionLeft.height}</aside>
+  <img src="${sectionLeft.pathURL}" alt="Jeep Pictures">
+  <aside>${sectionLeft.width}</aside>`;
   
 });
 
-output += '</section>';
+output += '</div>';
   
-document.querySelector('.width-height-image').innerHTML = output;
+document.getElementById('width-height-image').innerHTML = output;
 
 
 //right section -- includes: title,credit and description
-let output2 = '<section>\n';
+let output2 = '<div class="title-credit-desc">\n';
 
-jeeps.forEach(function(sectionLeft){
+jeeps.forEach(function(sectionRight){
   output2 += `
   
-  <h1>${sectionLeft.title}</h1>
-  <h2>${sectionLeft.credit}</h2>
-  <h2><a href="${sectionLeft.creditLink}">Instagram</a></h2>
-  <p>${sectionLeft.description}</p>`;
+  <h1 class="title">${sectionRight.title}</h1>
+  <h2 class="credit">${sectionRight.credit}</h2>
+  <h2 class="credit"><a href="${sectionRight.creditLink}">Instagram</a></h2>
+  <p class="description">${sectionRight.description}</p>
+  <div></div>
+  <div></div>`;
   
 });
 
-output2 += '</section>';
+output2 += '</div>';
   
-document.querySelector('.title-credit-desc').innerHTML = output2;
+document.getElementById('title-credit-desc').innerHTML = output2;
 
 

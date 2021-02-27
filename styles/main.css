@@ -49,10 +49,6 @@ main {
   grid-area: image;
 }
 
-.title-credit-desc {
-  grid-area: title;
-}
-
 header {
   grid-area: header;
 }
@@ -60,3 +56,22 @@ header {
 /***********/
 /*Left Section Grid Area*/
 /**********/
+
+.title-credit-desc {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+
+  gap: 1rem;
+
+  justify-content:center;
+}
+
+.title, .description, .credit{
+  place-self:center;
+}
+
+.description {
+  margin-bottom: 7rem;
+}
