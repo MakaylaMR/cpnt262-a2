@@ -2,11 +2,15 @@
 
 /*         FONTS        */
 /*headings*/
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: 'Roboto Condensed', sans-serif;
 }
+
 /*paragraphs*/
-figcaption, footer {
+figcaption,
+footer {
   font-family: 'Cabin', sans-serif;
 }
 
@@ -14,9 +18,10 @@ figcaption, footer {
 .header {
   text-align: center;
 
-  padding:0.5rem;
-  margin:0;
+  padding: 0.5rem;
+  margin: 0;
 }
+
 header {
   background: #000;
   color: #FFF;
@@ -28,21 +33,22 @@ footer {
   color: #FFF;
 
   margin: 0;
-  padding:0.7rem;
+  padding: 0.7rem;
 
-  text-align:center;
+  text-align: center;
 }
+
 /***********/
 /*Main Grid Area*/
 /**********/
 main {
-  display:grid;
+  display: grid;
 
   grid-template-columns: repeat(2, auto);
   grid-template-rows: auto;
   grid-template-areas:
-  "header header"
-  "title image";
+    "header header"
+    "title image";
 }
 
 .width-height-image {
@@ -65,13 +71,15 @@ header {
 
   gap: 1rem;
 
-  justify-content:center;
+  justify-content: center;
 }
 
-.title, .description, .credit{
-  place-self:center;
+.title,
+.description,
+.credit {
+  place-self: center;
 }
 
 .description {
-  margin-bottom: 7rem;
+  margin-bottom: rem;
 }
