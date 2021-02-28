@@ -4,12 +4,13 @@
 /*headings*/
 h1,
 h2,
-h3 {
+h3,
+.aside {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
 /*paragraphs*/
-figcaption,
+.description,
 footer {
   font-family: 'Cabin', sans-serif;
 }
@@ -38,48 +39,46 @@ footer {
   text-align: center;
 }
 
-/***********/
-/*Main Grid Area*/
-/**********/
+/*grid*/
 main {
-  display: grid;
-
-  grid-template-columns: repeat(2, auto);
-  grid-template-rows: auto;
-  grid-template-areas:
-    "header header"
-    "title image";
+  display:grid;
+  grid-template-columns: auto;
 }
 
-.width-height-image {
+section {
+  display: grid;
+
+  grid-template-areas: 
+  "image image height title credit"
+  "image image height link description"
+  "width width . . .";
+}
+
+.image {
   grid-area: image;
 }
 
-header {
-  grid-area: header;
+.title {
+  grid-area: title;
 }
 
-/***********/
-/*Left Section Grid Area*/
-/**********/
-
-.title-credit-desc {
-  display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(9, 1fr);
-
-  gap: 1rem;
-
-  justify-content: center;
+.height {
+  grid-area: height;
 }
 
-.title,
-.description,
+.width {
+  grid-area: width;
+}
+
 .credit {
-  place-self: center;
+  grid-area: credit;
+}
+
+.link {
+  grid-area: link;
 }
 
 .description {
-  margin-bottom: rem;
+  grid-area: description;
 }
+

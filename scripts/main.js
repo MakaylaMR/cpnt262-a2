@@ -103,38 +103,55 @@ const jeeps = [
 ];
 //decided to create two different outputs for my css grid vision, this had to include two different sections
 //left section -- includes: images, height and width
-let output = '<div class="width-height-image">\n';
-jeeps.forEach(function(sectionLeft){
+// let output = '<div class="width-height-image">\n';
+// jeeps.forEach(function(sectionLeft){
+//   output += `
+
+//   <aside>${sectionLeft.height}</aside>
+//   <img src="${sectionLeft.pathURL}" alt="Jeep Pictures">
+//   <aside>${sectionLeft.width}</aside>`;
+  
+// });
+
+// output += '</div>';
+  
+// document.getElementById('width-height-image').innerHTML = output;
+
+
+// //right section -- includes: title,credit and description
+// let output2 = '<div class="title-credit-desc">\n';
+
+// jeeps.forEach(function(sectionRight){
+//   output2 += `
+  
+//   <h1 class="title">${sectionRight.title}</h1>
+//   <h2 class="credit">${sectionRight.credit}</h2>
+//   <h2 class="credit"><a href="${sectionRight.creditLink}">Instagram</a></h2>
+//   <p class="description">${sectionRight.description}</p>
+//   <div></div>
+//   <div></div>`;
+  
+// });
+
+// output2 += '</div>';
+  
+// document.getElementById('title-credit-desc').innerHTML = output2;
+
+
+let output = '<section>\n';
+jeeps.forEach(function(jeep){
   output += `
 
-  <aside>${sectionLeft.height}</aside>
-  <img src="${sectionLeft.pathURL}" alt="Jeep Pictures">
-  <aside>${sectionLeft.width}</aside>`;
+  <aside class="aside height">${jeep.height}</aside>
+  <img class="image" src="${jeep.pathURL}" alt="Jeep Pictures">
+  <aside class="aside width">${jeep.width}</aside>
+  <h1 class="title">${jeep.title}</h1>
+  <h2 class="credit">${jeep.credit}</h2>
+  <h2 class="link"><a href="${jeep.creditLink}">Instagram</a></h2>
+  <p class="description">${jeep.description}</p>`;
   
 });
 
-output += '</div>';
-  
-document.getElementById('width-height-image').innerHTML = output;
+output += '</section>';
 
-
-//right section -- includes: title,credit and description
-let output2 = '<div class="title-credit-desc">\n';
-
-jeeps.forEach(function(sectionRight){
-  output2 += `
-  
-  <h1 class="title">${sectionRight.title}</h1>
-  <h2 class="credit">${sectionRight.credit}</h2>
-  <h2 class="credit"><a href="${sectionRight.creditLink}">Instagram</a></h2>
-  <p class="description">${sectionRight.description}</p>
-  <div></div>
-  <div></div>`;
-  
-});
-
-output2 += '</div>';
-  
-document.getElementById('title-credit-desc').innerHTML = output2;
-
-
+document.querySelector('section').innerHTML = output;
