@@ -103,40 +103,39 @@ const jeeps = [
 ];
 
 const section = document.querySelector('section');
-
+//append is used to nest elements into other elements. Eg: section.appendChild(figure), the figure element will become nested into the section element. HTML terms:
+//<section>
+//  <figure></figure>
+//</section>
 jeeps.forEach( function(jeep){
-
-  // using figures to put images into --> figure element into section
-  
+  //Creating a set of figure elements for each object inside array list.
     const figure = document.createElement('figure');
     section.appendChild(figure);
   
-  //title element into figure element
-  
+  //Creating h2 element to nest into the figures, this is the title.
     const title = document.createElement('h2');
     title.innerHTML = jeep.title;
     figure.appendChild(title);
   
-  // a img element is created along with the src and alt
-  
+  //Creating img element, this is where the image, the alt and its source will be located (all inside the img element)
     const img = document.createElement('img');
     img.src = jeep.pathURL;
     img.alt = jeep.description;
+    img.width = jeep.width;
+    img. height = jeep.height;
     figure.appendChild(img);
   
-  // width and height
-
+  //Creating aside elements for width and height, I had a very specific vision for css grid, this is why I chose to display these into the HTML. Otherwise can include these into the img tag above.
     const width = document.createElement('aside');
     const height = document.createElement('aside');
     height.innerHTML = jeep.height;
     width.innerHTML = jeep.width;
     figure.appendChild(width);
     figure.appendChild(height);
-  // a figcaption element is created, its inner text is set, and it is nested within a figure element
-  
-  
+ 
+  //Creating a figcaption element this includes the image description. 
     const figCaption = document.createElement('figcaption')
-    figCaption.innerHTML = `${jeep.description} Photo by `;
+    figCaption.innerHTML = `${jeep.description}`;
     figure.appendChild(figCaption);
   
   // an anchor element is created for the credit link and nested within a figcaption
