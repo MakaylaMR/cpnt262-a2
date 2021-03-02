@@ -42,6 +42,7 @@ body{
   background-color: #263859;
 }
 
+/*using Grid*/
 main {
   display:grid;
   justify-items: center;

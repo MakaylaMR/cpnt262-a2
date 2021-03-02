@@ -29,6 +29,6 @@ Published at:
 
 ## Attributions (in-class)
 
-| Person      |                     Links                     | Where (HTML/CSS/JS) |
-| ----------- | :-------------------------------------------: | ------------------- |
-| Ashlyn Knox | [Link](https://codepen.io/Aidano/pen/yLVBZBX) |                     |
+| Person      |                                  Links                                   |
+| ----------- | :----------------------------------------------------------------------: |
+| Ashlyn Knox | [Link](https://github.com/ashlyn-knox/js-sandbox/blob/main/gallery.html) |
