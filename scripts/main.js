@@ -117,7 +117,7 @@ jeeps.forEach( function(jeep){
     title.innerHTML = jeep.title;
     figure.appendChild(title);
   
-  // a img element is created, its src, alt, width, and height are set
+  // a img element is created along with the src and alt
   
     const img = document.createElement('img');
     img.src = jeep.pathURL;
