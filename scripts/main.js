@@ -102,28 +102,26 @@ const jeeps = [
   }
 ];
 
-const container = document.querySelector('section');
+const section = document.querySelector('section');
 
 jeeps.forEach( function(jeep){
 
-  // a figure element is created and nested within the container
+  // using figures to put images into --> figure element into section
   
     const figure = document.createElement('figure');
-    container.appendChild(figure);
+    section.appendChild(figure);
   
-  // a title element is created and nested within a figure element
+  //title element into figure element
   
     const title = document.createElement('h2');
     title.innerHTML = jeep.title;
     figure.appendChild(title);
   
-  // a img element is created, its src, alt, width, and height are set and then it is nested within an anchor element
+  // a img element is created, its src, alt, width, and height are set
   
     const img = document.createElement('img');
     img.src = jeep.pathURL;
     img.alt = jeep.description;
-    img.width = jeep.width;
-    img.height = jeep.height;
     figure.appendChild(img);
   
   // width and height
