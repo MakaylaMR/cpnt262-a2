@@ -9,7 +9,7 @@ const jeeps = [
     height: 683,
     pathURL:'assets/images/couple-jeeps-medium.jpg', 
     credit: 'Nathan Strome',
-    creditLink: '<a href="https://www.instagram.com/evolution_jk/',
+    creditLink: 'https://www.instagram.com/evolution_jk/',
     alt: 'Two Jeeps'
   },
   {
@@ -20,7 +20,7 @@ const jeeps = [
     height: 683,
     pathURL:'assets/images/jeep-background-medium.jpg',
     credit: 'Nathan Strome',
-    creditLink: '<a href="https://www.instagram.com/evolution_jk/',
+    creditLink: 'https://www.instagram.com/evolution_jk/',
     alt: 'Two Jeeps'
   },
   {
@@ -31,7 +31,7 @@ const jeeps = [
     height: 683,
     pathURL:'assets/images/jeep-profile-makayla-medium.jpg',
     credit: 'Nathan Strome',
-    creditLink: '<a href="https://www.instagram.com/evolution_jk/',
+    creditLink: 'https://www.instagram.com/evolution_jk/',
     alt: 'jeeps'
   },
   {
@@ -42,7 +42,7 @@ const jeeps = [
     height: 683,
     pathURL:'assets/images/jeep-profile-nathan-medium.jpg',
     credit: 'Nathan Strome',
-    creditLink: '<a href="https://www.instagram.com/evolution_jk/',
+    creditLink: 'https://www.instagram.com/evolution_jk/',
     alt: 'jeeps'
   },
   {
@@ -53,7 +53,7 @@ const jeeps = [
     height: 683,
     pathURL:'assets/images/jeepjk-bctrip-medium.jpg',
     credit: 'Nathan Strome',
-    creditLink: '<a href="https://www.instagram.com/evolution_jk/',
+    creditLink: 'https://www.instagram.com/evolution_jk/',
     alt:'jeeps in bc'
   },
   {
@@ -64,7 +64,7 @@ const jeeps = [
     height: 683,
     pathURL:'assets/images/jeepjk-jeeptj-airdown-medium.jpg',
     credit: 'Nathan Strome',
-    creditLink: '<a href="https://www.instagram.com/evolution_jk/',
+    creditLink: 'https://www.instagram.com/evolution_jk/',
     alt:'jeeps'
   },
   {
@@ -75,7 +75,7 @@ const jeeps = [
     height: 683,
     pathURL:'assets/images/jeeptj-airdown-medium.jpg',
     credit: 'Nathan Strome',
-    creditLink: '<a href="https://www.instagram.com/evolution_jk/',
+    creditLink: 'https://www.instagram.com/evolution_jk/',
     alt:'jeeps'
   },
   {
@@ -86,7 +86,7 @@ const jeeps = [
     height: 682,
     pathURL:'assets/images/jeeptj-hole-medium.jpg',
     credit: 'Nathan Strome',
-    creditLink: '<a href="https://www.instagram.com/evolution_jk/',
+    creditLink: 'https://www.instagram.com/evolution_jk/',
     alt:'jeeps'
   },
   {
@@ -97,7 +97,7 @@ const jeeps = [
     height: 683,
     pathURL:'assets/images/jeeptj-sideprofile-medium.jpg',
     credit: 'Nathan Strome',
-    creditLink: '<a href="https://www.instagram.com/evolution_jk/>Nathan Strome</a>',
+    creditLink: 'https://www.instagram.com/evolution_jk/',
     alt:'jeeps'
   }
 ];
@@ -117,31 +117,34 @@ jeeps.forEach( function(jeep){
     title.innerHTML = jeep.title;
     figure.appendChild(title);
   
-  //Creating img element, this is where the image, the alt and its source will be located (all inside the img element)
+  //Creating img element, this is where the image, the alt, its source, height and width will be located (all inside the img element)
     const img = document.createElement('img');
     img.src = jeep.pathURL;
     img.alt = jeep.description;
     img.width = jeep.width;
-    img. height = jeep.height;
+    img.height = jeep.height;
     figure.appendChild(img);
   
-  //Creating aside elements for width and height, I had a very specific vision for css grid, this is why I chose to display these into the HTML. Otherwise can include these into the img tag above.
-    const width = document.createElement('aside');
-    const height = document.createElement('aside');
-    height.innerHTML = jeep.height;
-    width.innerHTML = jeep.width;
-    figure.appendChild(width);
-    figure.appendChild(height);
- 
+  //Creating aside elements for width and height, I had a very specific vision for css grid, this is why I chose to display these into the HTML. Otherwise can include these into the img tag alone.
+  //   const width = document.createElement('aside');
+  //   const height = document.createElement('aside');
+  //   height.innerHTML = jeep.height;
+  //   width.innerHTML = jeep.width;
+  //   figure.appendChild(width);
+  //   figure.appendChild(height);
+
+  // //Adding classes to differentiate aside elements in css grid.
+  //   height.classList.add('height');
+  //   width.classList.add('width');
+
+  //Creating a anchor element, this displays the photographers name and attached is a link to his "portfolio". (instagram)
+    const creditLink = document.createElement('a');
+    creditLink.href = jeep.creditLink;
+    creditLink.innerHTML = `Photo by ${jeep.credit}`;
+    figure.appendChild(creditLink);
+
   //Creating a figcaption element this includes the image description. 
     const figCaption = document.createElement('figcaption')
     figCaption.innerHTML = `${jeep.description}`;
     figure.appendChild(figCaption);
-  
-  // an anchor element is created for the credit link and nested within a figcaption
-  
-    const creditLink = document.createElement('a');
-    creditLink.href = jeep.creditURL;
-    creditLink.innerHTML = jeep.credit;
-    figCaption.appendChild(creditLink);
   });
