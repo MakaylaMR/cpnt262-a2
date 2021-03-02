@@ -96,26 +96,65 @@ const jeeps = [
     width: 1024,
     height: 683,
     pathURL:'assets/images/jeeptj-sideprofile-medium.jpg',
-    credit: 'Credit: Nathan Strome',
-    creditLink: '<a href="https://www.instagram.com/evolution_jk/',
+    credit: 'Nathan Strome',
+    creditLink: '<a href="https://www.instagram.com/evolution_jk/>Nathan Strome</a>',
     alt:'jeeps'
   }
 ];
 
-let output = '<section>\n';
-jeeps.forEach(function(jeep){
-  output += `
+// let output = '<section>\n';
+// jeeps.forEach(function(jeep){
+//   output += `
 
-  <aside class="aside height">${jeep.height}</aside>
-  <img class="image" src="${jeep.pathURL}" alt="Jeep Pictures">
-  <aside class="aside width">${jeep.width}</aside>
-  <h1 class="title">${jeep.title}</h1>
-  <h2 class="credit">${jeep.credit}</h2>
-  <h2 class="link"><a href="${jeep.creditLink}">Instagram</a></h2>
-  <p class="description">${jeep.description}</p>`;
+//   <img class="image" src="${jeep.pathURL}" alt="Jeep Pictures">
+//   <aside class="aside height">${jeep.height}</aside>
+//   <h1 class="title">${jeep.title}</h1>
+//   <h2 class="credit">${jeep.credit}</h2>
+//   <aside class="aside width">${jeep.width}</aside>
+//   <h2 class="link"><a href="${jeep.creditLink}">Instagram</a></h2>
+//   <p class="description">${jeep.description}</p>`;
   
-});
+// });
 
-output += '</section>';
+// output += '</section>';
 
-document.querySelector('section').innerHTML = output;
+// document.querySelector('section').innerHTML = output;
+
+const container = document.querySelector('section');
+
+jeeps.forEach( function(jeep){
+
+  // a figure element is created and nested within the container
+  
+    const figure = document.createElement('figure');
+    container.appendChild(figure);
+  
+  // a title element is created and nested within a figure element
+  
+    const title = document.createElement('h2');
+    title.innerHTML = jeep.title;
+    figure.appendChild(title);
+  
+  // a img element is created, its src, alt, width, and height are set and then it is nested within an anchor element
+  
+    const img = document.createElement('img')
+    img.src = jeep.pathURL;
+    img.alt = jeep.description;
+    img.width = jeep.width;
+    img.height = jeep.height;
+    figure.appendChild(img);
+  
+  // a figcaption element is created, its inner text is set, and it is nested within a figure element
+  
+  
+    const figCaption = document.createElement('figcaption')
+    figCaption.innerHTML = `${jeep.description} Photo by `;
+    figure.appendChild(figCaption);
+  
+  // an anchor element is created for the credit link and nested within a figcaption
+  
+    const creditLink = document.createElement('a');
+    creditLink.href = jeep.creditURL;
+    creditLink.innerHTML = jeep.credit;
+    figCaption.appendChild(creditLink);
+  });

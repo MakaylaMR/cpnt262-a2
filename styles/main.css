@@ -81,4 +81,66 @@ section {
 .description {
   grid-area: description;
 }
+/* 
+section {
+  display: grid;
+  grid-template-columns: 1024px 40px 200px 200px;
+  grid-template-rows: 341.5px 341.5px 40px;
+}
+
+img {
+  grid-column-start: col1-start;
+  grid-column-end: col2-end;
+
+  grid-row-start: row1-start;
+  grid-row-end: row2-end;
+}
+
+.height {
+  grid-column-start: col2-start;
+  grid-column-end: col2-end;
+
+  grid-row-start: row1-start;
+  grid-row-end: row2-end;
+}
+
+.title {
+  grid-column-start: col3-start;
+  grid-column-end: col3-end;
+
+  grid-row-start: row1-start;
+  grid-row-end: row1-end;
+}
+
+.credit {
+  grid-column-start: col4-start;
+  grid-column-end: col4-end;
+
+  grid-row-start: row1-start;
+  grid-row-end: row1-end;
+}
+
+.link {
+  grid-column-start: col3-start;
+  grid-column-end: col3-end;
+
+  grid-row-start: row2-start;
+  grid-row-end: row2-end;
+}
+
+.description {
+  grid-column-start: col4-start;
+  grid-column-end: col4-end;
+
+  grid-row-start: row2-start;
+  grid-row-end: row2-end;
+}
+
+.width {
+  grid-column-start: col1-start;
+  grid-column-end: col1-end;
+
+  grid-row-start: row3-start;
+  grid-row-end: row3-end;
+} */
 
