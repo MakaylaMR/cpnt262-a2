@@ -126,3 +126,29 @@ figcaption {
   color: #FFF;
 }
 
+/* makes the grid responsive to screen sizes with a max width of 55rem */
+@media screen and (max-width: 55rem) {
+  figure {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto 150px 100px;
+    grid-template-areas:
+    "image image"
+    "image image"
+    "title link"
+    "description description";
+  }
+}
+/* removes borders around title, link and description */
+@media screen and (max-width: 36.5rem) {
+  h2 {
+    border: none;
+  }
+
+  a {
+    border: none;
+  }
+
+  figcaption {
+    border:none;
+  }
+}

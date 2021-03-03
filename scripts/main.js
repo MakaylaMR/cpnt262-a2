@@ -117,25 +117,13 @@ jeeps.forEach( function(jeep){
     title.innerHTML = jeep.title;
     figure.appendChild(title);
   
-  //Creating img element, this is where the image, the alt, its source, height and width will be located (all inside the img element)
+  //Creating img element, this is where the image, the alt, its source, height and width will be located (these become the image attributes)
     const img = document.createElement('img');
     img.src = jeep.pathURL;
     img.alt = jeep.description;
     img.width = jeep.width;
     img.height = jeep.height;
     figure.appendChild(img);
-  
-  //Creating aside elements for width and height, I had a very specific vision for css grid, this is why I chose to display these into the HTML. Otherwise can include these into the img tag alone.
-  //   const width = document.createElement('aside');
-  //   const height = document.createElement('aside');
-  //   height.innerHTML = jeep.height;
-  //   width.innerHTML = jeep.width;
-  //   figure.appendChild(width);
-  //   figure.appendChild(height);
-
-  // //Adding classes to differentiate aside elements in css grid.
-  //   height.classList.add('height');
-  //   width.classList.add('width');
 
   //Creating a anchor element, this displays the photographers name and attached is a link to his "portfolio". (instagram)
     const creditLink = document.createElement('a');
